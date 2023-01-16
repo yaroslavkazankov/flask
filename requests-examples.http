@@ -1,0 +1,91 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:8000
+
+# создание пользователя
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "name": "Tolja",
+  "e-mail": "Tol@mail.ru",
+  "password" : "qwe",
+  "confirm-password": "qwe"
+}
+
+###
+
+# получение пользователей
+GET {{baseUrl}}/users/
+Content-Type: application/json
+
+###
+
+# обновление пользователя
+PATCH {{baseUrl}}/users/6
+Content-Type: application/json
+
+{
+  "name": "Tol2",
+  "e-mail": "Tolmitol@mail.ru",
+  "password" : "qwe",
+  "new_password" : "aaa"
+}
+
+###
+# удаление пользователя
+DELETE {{baseUrl}}/users/4
+Content-Type: application/json
+
+{
+  "password" : "aaa"
+}
+
+
+
+###
+# создание объявления
+POST {{baseUrl}}/note/
+Content-Type: application/json
+
+{
+  "owner": "Tolja",
+  "e-mail": "Tol@mail.ru",
+  "password": "qwe",
+  "title": "sell sugar in small box",
+  "description": "low cost of Sugar" 
+}
+
+
+###
+# обновление объявления
+PATCH {{baseUrl}}/note/2
+Content-Type: application/json
+
+{
+  "owner": "Tolja",
+  "e-mail": "Tol@mail.ru",
+  "password": "qwe",
+  "title": "sell sugar in big box",
+  "description": "low cost of Sugar" 
+}
+
+
+###
+# удаление объявления
+DELETE {{baseUrl}}/note/3
+Content-Type: application/json
+
+{
+  "owner": "Tolja",
+  "e-mail": "Tol@mail.ru",
+  "password": "qwe"
+}
+
+
+###
+# получение объявлений
+GET {{baseUrl}}/note/
+Content-Type: application/json
+
+###
